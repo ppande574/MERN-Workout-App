@@ -11,7 +11,7 @@ const app = express();
  * and calling the next middleware function in the stack. For now it's just logging the req path and method. 
  * next() means that the middleware has finished its job, and that control should be passed to the next middleware 
  * or route handler in the stack. Can be used for various purposes, such as authentication, logging, parsing request bodies, 
- * handling errors, and more
+ * handling errors, and more.
  */
 
 app.use((req, res, next) => {
@@ -26,7 +26,6 @@ app.get("/", (req, res) => {
 });
 
 //listen for requests at a particular port number stored as an env variable
-
 app.listen(process.env.PORT, () => {
   console.log("Listening on port ", process.env.PORT);
 });
